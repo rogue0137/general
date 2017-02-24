@@ -2,7 +2,7 @@
 #HOW TO RUN: PY HARD
 
 
-This script is an examples of solving the water pouring problem. It is modified from a section of Udacity's [Design of Computer Programs](https://www.udacity.com/course/design-of-computer-programs--cs212) class with Peter Norvig. You can use any three positive numbers. If there is a solution, it will print the steps that get you to that solution. If there is no solution, it will print 'No solution possible'.
+This script is an example of solving the water pouring problem. It is modified from a section of Udacity's [Design of Computer Programs](https://www.udacity.com/course/design-of-computer-programs--cs212) class with Peter Norvig. You can use any three positive numbers. If there is a solution, it will print the steps that get you to that solution. If there is no solution, it will print 'No solution possible'.
 
 
 ##Run this code
@@ -42,6 +42,6 @@ Step 4:  Pour bucket one into bucket two --> Bucket One has 0 gallons. Bucket Tw
 Step 5:  Fill bucket one with 5 gallons --> Bucket One has 5 gallons. Bucket Two has 2 gallons.
 Step 6:  Pour bucket one into bucket two --> Bucket One has 4 gallons. Bucket Two has 3 gallons.
 Solution found.
-```sh
+```
 
 
