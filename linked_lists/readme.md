@@ -1,6 +1,6 @@
 ---
 #HOW TO RUN: LINKED LISTS
----
+
 
 These scripts an examples of creating linked lists in python. With these classes, several descriptions of the dog Arya are instantiated. The linked list **descriptions_of_arya** is then instantiated. Previously instantiated descriptions are added to **descriptions_of_arya** using a . Two further description are added using the method **insert_new description**. Later, the method **delete_old_description** is used to delete the description at position 1. After all descriptions have been reordered, the description at position 4 is also removed. There are print outs of results along the way.
 
@@ -11,12 +11,12 @@ Use Python 2.7
 Clone this folder using 
 ```sh
 $ git clone https://github.com/rogue0137/practice.git
-```sh
+```
 
 Then type
 ```sh
 $ python dog_creation.py
-```sh
+```
  
 See the following results printed
 ```sh
@@ -49,9 +49,10 @@ descriptions of arya, description in first position: wags her tail
 descriptions of arya, description in second position: lives in DTLA
 descriptions of arya, description in third position: loves peanut butter
 descriptions of arya, description in fourth position: furiously awesome
-```sh 
+``` 
 
 ##And in case you were interested...
 
-<img src="http://imgur.com/a/w63Vs" width="" height="326" alt="Arya the Dog" />
+<img src="http://imgur.com/a/w63Vs" width="244" height="326" alt="Arya the Dog" />
 
+---
