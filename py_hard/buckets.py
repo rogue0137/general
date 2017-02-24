@@ -1,9 +1,11 @@
 #!/usr/bin/python2.7
-def the_bucket_challenge(bucket_one,bucket_two,goal,starting=(0,0)):
+import re
+
+
+def the_bucket_challenge(bucket_one,bucket_two,desired_bucket,starting=(0,0)):
     """This is the DieHard 3 Water Jug Problem, also known as the classic Water
-    Pouring Problem."""
-    
-    if goal in starting:
+    Pouring Problem."""  
+    if desired_bucket in starting:
         #print(starting)
         return [starting]
     explored = set() #set of states we have visited
@@ -16,8 +18,21 @@ def the_bucket_challenge(bucket_one,bucket_two,goal,starting=(0,0)):
                 explored.add(state)
                 path2 = path + [action,state]
                 #print(path2)
-                if goal in state:
-                    print(path2)
+                if desired_bucket in state:
+                    path_on_individual_lines = re.split('\),',str(path2))
+                    steps = 0
+                    for step_string in path_on_individual_lines:
+                        steps += 1
+                        if steps == 1:
+                            step_string_without_parens = (step_string.replace('[(','')).split(',')
+                            step_string_with_gallons ='Start with ' + step_string_without_parens[0]  + ' gallons in Bucket One and' + step_string_without_parens[1] + ' gallons in Bucket Two. All water is in the lake.'
+                            print(step_string_with_gallons)
+                        else:
+                            step_string_without_quotes = step_string.replace('\'','')
+                            step_string_without_parens = ((step_string_without_quotes.replace('(','')).replace(')]','')).split(',')
+                            step_string_with_gallons = ('Step ' + str(steps - 1) + ': ' + str(step_string_without_parens[0]) + ' --> Bucket One has' + str(step_string_without_parens[1]) + ' gallons. Bucket Two has' + str(step_string_without_parens[2]) + ' gallons.' )
+                            print(step_string_with_gallons)
+                    #print(path2)    
                     return path2
                 else:
                     frontier.append(path2)
@@ -28,22 +43,27 @@ Fail = []
 
 
 def successors(x,y,bucket_one,bucket_two):
-    """Return a dict of {state:action} pairs describing what can be reached from
-    the (x,y) state, and how."""
     #x = level of bucket one
     #y = level of bucket two
     assert x <= bucket_one and y <= bucket_two 
-    return {((0,y+x) if y+x<=bucket_two else (x-(bucket_two-y), y+(bucket_two-y))): 'pour bucket one into bucket two',
-            ((x+y, 0) if x+y<=bucket_one else (x+(bucket_one-x), y-(bucket_one-x))): 'pour bucket two into bucket one',
-            (bucket_one,y): 'fill bucket one with ' + str(bucket_one) + ' gallons' , (x,bucket_two):'fill bucket two with ' + str(bucket_two) + ' gallons',
-            (0,y): 'empty bucket one', (x,0):'empty bucket two'}
+    return {((0,y+x) if y+x<=bucket_two else (x-(bucket_two-y), y+(bucket_two-y))): 'Pour bucket one into bucket two',
+            ((x+y, 0) if x+y<=bucket_one else (x+(bucket_one-x), y-(bucket_one-x))): 'Pour bucket two into bucket one',
+            (bucket_one,y): 'Fill bucket one with ' + str(bucket_one) + ' gallons' , (x,bucket_two):'Fill bucket two with ' + str(bucket_two) + ' gallons',
+            (0,y): 'Empty bucket one', (x,0):'Empty bucket two'}
 
 
-solution = the_bucket_challenge(5,3,4)
+bucket_one = int(raw_input('How many gallons are in your first bucket? '))
+bucket_two = int(raw_input('How many gallons are in your second bucket? '))
+desired_bucket = int(raw_input('How many gallons are in your desired bucket? '))
+print('\n')
+
+
+solution = the_bucket_challenge(bucket_one,bucket_two,desired_bucket)
 
 if solution != Fail:
     print('Solution found.')
 else:
     print('No solution possible.')
     
-#the_bucket_challenge(0,1,0)
+
+
