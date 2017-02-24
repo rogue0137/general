@@ -24,7 +24,11 @@ Then type
 $ python buckets.py
 ```
 
-Respond to the input requests. As an example below, I will be using 5, 3, and 4 as our first bucket, second bucket, and desired bucket respectively.
+Respond to the input requests. 
+
+
+##Example with solution
+As an example below, I will be using 5, 3, and 4 as our first bucket, second bucket, and desired bucket respectively.
 
 ```sh
 How many gallons are in your first bucket? 5
@@ -32,7 +36,7 @@ How many gallons are in your second bucket? 3
 How many gallons are in your desired bucket? 4
 ```
 
-Because these numbers have a solution, it will print out the following:
+Because these numbers have a solution, the following will print out:
 ```sh
 Start with 0 gallons in Bucket One and 0 gallons in Bucket Two. All water is in the lake.
 Step 1:  Fill bucket one with 5 gallons --> Bucket One has 5 gallons. Bucket Two has 0 gallons.
@@ -44,4 +48,16 @@ Step 6:  Pour bucket one into bucket two --> Bucket One has 4 gallons. Bucket Tw
 Solution found.
 ```
 
+##Example without solution
+As an example below, I will be using 552, 45, and 2 as our first bucket, second bucket, and desired bucket respectively.
 
+```sh
+How many gallons are in your first bucket? 552
+How many gallons are in your second bucket? 45
+How many gallons are in your desired bucket? 2
+```
+
+Because there is no solution to this problem, the following will print out.
+```sh
+No solution possible.
+```
