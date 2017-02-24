@@ -13,6 +13,11 @@ Clone this folder using
 $ git clone https://github.com/rogue0137/practice.git
 ```
 
+cd into the appropriate folder
+```sh
+$ cd linked_lists
+```
+
 Then type
 ```sh
 $ python dog_creation.py
