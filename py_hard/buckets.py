@@ -1,15 +1,14 @@
 #!/usr/bin/python2.7
 import re
 
-
 def the_bucket_challenge(bucket_one,bucket_two,desired_bucket,starting=(0,0)):
     """This is the DieHard 3 Water Jug Problem, also known as the classic Water
-    Pouring Problem."""  
+    Pouring Problem. Here we explore different paths to reach a solution. We store each path
+    in the variable explored. We store the order of the paths in frontier."""  
     if desired_bucket in starting:
-        #print(starting)
         return [starting]
-    explored = set() #set of states we have visited
-    frontier = [[starting]] #ordered list of paths we have blazed
+    explored = set() 
+    frontier = [[starting]] 
     while frontier:
         path = frontier.pop(0)
         (x,y) = path[-1] #Last state in the first path of the frontier
@@ -43,8 +42,11 @@ Fail = []
 
 
 def successors(x,y,bucket_one,bucket_two):
-    #x = level of bucket one
-    #y = level of bucket two
+    """ These are notes about x and y:
+    x = level of bucket one
+    y = level of bucket two
+    """
+    
     assert x <= bucket_one and y <= bucket_two 
     return {((0,y+x) if y+x<=bucket_two else (x-(bucket_two-y), y+(bucket_two-y))): 'Pour bucket one into bucket two',
             ((x+y, 0) if x+y<=bucket_one else (x+(bucket_one-x), y-(bucket_one-x))): 'Pour bucket two into bucket one',
