@@ -53,6 +53,6 @@ descriptions of arya, description in fourth position: furiously awesome
 
 ##And in case you were interested...
 
-<img src="http://imgur.com/a/w63Vs" width="244" height="326" alt="Arya the Dog" />
+<img src="http://i.imgur.com/VqRzvF2.jpg" width="244" height="326" alt="Arya the Dog"/>
 
 ---
