@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 class AryaTheDog(object):
     """ This class creates a dog """
@@ -52,14 +52,16 @@ class AllAboutArya(object):
             self.start = new_description
             
     def delete_old_description(self,description_value):      
-        current_description = self.start
-        previous_description = None
-        while current_description.description_value != description_value and current_description.next:
-            previous_description = current_description
-            current_description = current_description.next 
-        if current_description.description_value == description_value:
-            if previous_description:
-                previous_description.next == current_description.next
+        description_counter = 1
+        current = self.start
+        previous = None
+        while description_counter != description_value and current.next:
+            previous = current
+            current = current.next
+            description_counter += 1 
+        if description_counter == description_value:
+            if previous:
+                previous.next == current.next
             else:
-                self.start = current_description.next
+                self.start = current.next
 
