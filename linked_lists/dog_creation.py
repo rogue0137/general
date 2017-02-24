@@ -4,7 +4,7 @@ import dog_related_classes
 
 #creating descriptions of arya
 description_one = dog_related_classes.AryaTheDog('wags her tail')
-description_two = dog_related_classes.AryaTheDog('loves peanute butter')
+description_two = dog_related_classes.AryaTheDog('loves peanut butter')
 description_three = dog_related_classes.AryaTheDog('is super tiny and adorable')
 description_four = dog_related_classes.AryaTheDog('furiously awesome')
 
@@ -49,8 +49,8 @@ descriptions_of_arya.delete_old_description(4)
 print('\n')
 print('Description values after deletion:')
 print('description of arya start description_value: ' + descriptions_of_arya.start.description_value)
-print('description of arya next description_value: ' + descriptions_of_arya.start.next.description_value)
-print('description of arya next next description_value: ' + descriptions_of_arya.start.next.next.description_value)
+#print('description of arya next description_value: ' + descriptions_of_arya.start.next.description_value)
+#print('description of arya next next description_value: ' + descriptions_of_arya.start.next.next.description_value)
 print('descriptions of arya, description in first position: ' + str(descriptions_of_arya.get_dog_description_position(1).description_value))
 print('descriptions of arya, description in second position: ' + str(descriptions_of_arya.get_dog_description_position(2).description_value))
 print('descriptions of arya, description in third position: ' + str(descriptions_of_arya.get_dog_description_position(3).description_value))
