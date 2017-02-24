@@ -32,7 +32,7 @@ How many gallons are in your second bucket? 3
 How many gallons are in your desired bucket? 4
 ```
 
-Because these numbers has a solution, it will print out the following:
+Because these numbers have a solution, it will print out the following:
 ```sh
 Start with 0 gallons in Bucket One and 0 gallons in Bucket Two. All water is in the lake.
 Step 1:  Fill bucket one with 5 gallons --> Bucket One has 5 gallons. Bucket Two has 0 gallons.
