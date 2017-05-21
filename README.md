@@ -1,2 +1,2 @@
-# practice
+# general
 for practice problems
