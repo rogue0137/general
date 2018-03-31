@@ -1,6 +1,6 @@
-#Introduction to Machine Learning with Python
+# Introduction to Machine Learning with Python
 
-##By Müller and Guido
+## By Müller and Guido
 
 ### CHAPTER 1
 
@@ -27,5 +27,3 @@ _Steps to get classifying_iris_species.py to work_
 6. Produce a beautifully colored output file. EX:
 
 ![Scatterplot: Chapter 1](/images/section_intromachinelearning_chapt1.jpg)
-
-![Scatterplot: Chapter 1](/general/machine_learning/images/section_intromachinelearning_chapt1.jpg)
