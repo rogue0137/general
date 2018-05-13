@@ -5,6 +5,8 @@ from datetime import datetime
 BITCOIN_PRICE_THRESHOLD = 10000
 BITCOIN_API_URL = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/'
 # need {} instead of an actual event name in order for multiple events to use it
+# it's basically noting a variable using the .format option
+# ex. '{}, {}, {}'.format('a', 'b', 'c')
 IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/{}/with/key/{ifttt_key}'
 
 
