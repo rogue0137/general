@@ -81,3 +81,4 @@ s = "s" if len(users) > 1 else ""
 # STILL NEED TO PUT filter todos and write the resulting list
 # to a file. For the sake of originality, you can call the
 # output file filtered_data_file.json
+https://realpython.com/python-json/
