@@ -20,7 +20,7 @@ _Steps to get classifying_iris_species.py to work_
 
 4. Install necessary packages
 
-```pip install mglearn numpy scipy matplotlib ipython scikit-learn pandas pillow```
+```pip install mglearn numpy scipy matplotlib ipython scikit-learn pandas pillow graphviz```
 
 5. Call the file using the full file path. EX:
 
